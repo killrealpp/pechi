@@ -1,0 +1,180 @@
+.header{
+    padding-top: 16px;
+    background-color: $bg-color;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
+    &__input{
+        margin-left: 40px;
+        width: 100%;
+        padding: 16px 0 16px 24px;
+        @extend %nekst-400;
+        font-size: 16px;
+        line-height: calc(24 / 16);
+        border-radius: 28px;
+        border: 2px solid rgb(223, 226, 229);
+        background-color: rgba(254, 254, 255, 0.1);
+    }
+    &__details{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+// .logo{
+
+// }
+
+.cart, .star, .scales {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid $accent-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    svg path{
+        fill: $accent-color;
+    }
+    &:hover{
+        background-color: $accent-color;
+        svg path{
+            fill: #fff;
+        }
+    }
+}
+
+
+.header{
+    &__bottom{
+        background-color: rgba(97, 112, 125, 0.05);
+        border-radius: 28px;
+        padding-right: 40px;
+        &-details{
+            display: flex;
+            align-items: center;
+            gap: 40px
+        }
+    }
+}
+
+
+
+.menu{
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    &__item{
+        list-style: none;
+        &-link{
+            @extend %nekst-500;
+            font-size: 16px;
+            line-height: calc(24 / 16);
+            color: $main-color;
+        }
+    }
+}
+
+.header__num{
+    margin-left: auto;
+    &-btn{
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        border: none;
+        background-color: transparent;
+        &-title{
+            color: $accent-color;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.2;
+            letter-spacing: 0.1em;
+        }
+    }
+}
+
+
+
+.catalog{
+    &__btn{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background-color: $accent-color;
+        border-radius: 28px;
+        padding: 16px 40px;
+        cursor: pointer;
+    }
+    &__title{
+        @extend %nekst-700;
+        color: $bg-color;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+}
+
+.catalog{
+    &__content{
+        padding: 16px;
+        background: rgba(97, 112, 125, 0.05);
+        border-radius: 24px;
+        min-width: 271px;
+        top: 80px;
+        max-height: 580px;
+        overflow-y: auto;
+    }
+    &__list {
+        padding: 16px 0;
+        border-bottom: 2px solid rgba(97, 112, 125, 0.05);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;    
+        &:first-child {
+            padding-top:0;
+        }    
+        &:last-child {
+            padding-bottom: 0;  
+        }
+        
+    }
+    &__item{
+        list-style: none;
+        &:hover &-link-title{
+            color: $accent-color;
+        }
+        &-link{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            &-img{
+                padding: 12px;
+            }
+            &-title{
+                @extend %nekst-500;
+                font-size: 16px;
+                line-height: 1.5;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.catalog__content-inner{
+    display: flex;
+    flex-direction: column;
+}
+

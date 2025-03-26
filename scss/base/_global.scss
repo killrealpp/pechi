@@ -1,0 +1,74 @@
+html{
+    scroll-behavior: smooth;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: $bg-color;
+    color:$main-color;
+    @extend %nekst-400;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex:1;
+}
+
+.container{
+    max-width: $maxWidth-container;
+    margin: 0 auto;
+    padding: $padding-container;
+}
+
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown__list{
+    display: none;
+    position: absolute;
+    z-index: 5;
+}
+
+.dropdown__list-item{
+    list-style: none;
+}
+
+.dropdown__list--visible{
+    display: block;
+}
+
+
+
+.dialog{
+    position: relative;
+}
+
+.dialog__content{
+    display: none;
+    position: absolute;
+    z-index: 5;
+}
+
+.dialog__content--visible{
+    display: block;
+}

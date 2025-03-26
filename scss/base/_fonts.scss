@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Nekst';
+    src: url('/fonts/FONTSPRINGDEMO-NekstBlacRegular.woff2') format('woff2');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Nekst';
+    src: url('/fonts/FONTSPRINGDEMO-NekstBoldRegular.woff2') format('woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Nekst';
+    src: url('/fonts/FONTSPRINGDEMO-NekstMediumRegular.woff2') format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Nekst';
+    src: url('/fonts/FONTSPRINGDEMO-NekstRegular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+
+%nekst-900{
+    font-family: 'Nekst', sans-serif;
+    font-weight: 900;
+}
+%nekst-500{
+    font-family: 'Nekst', sans-serif;
+    font-weight: 500;
+}
+%nekst-700{
+    font-family: 'Nekst', sans-serif;
+    font-weight: 700;
+}
+%nekst-400{
+    font-family: 'Nekst', sans-serif;
+    font-weight: 400;
+}
