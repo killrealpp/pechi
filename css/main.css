@@ -305,9 +305,12 @@ body {
   position: fixed;
   left: 0;
   top: 168px;
+  right: 0;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
 }
 .catalog__inner {
-  padding-left: 90px;
   display: flex;
   gap: 40px;
 }
@@ -337,6 +340,9 @@ body {
   list-style: none;
 }
 .catalog__item:hover .catalog__item-link-title {
+  color: rgb(247, 117, 42);
+}
+.catalog__item.active .catalog__item-link-title {
   color: rgb(247, 117, 42);
 }
 .catalog__item-link {

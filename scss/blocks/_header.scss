@@ -130,9 +130,17 @@
         position: fixed;
         left: 0;
         top: 168px;
+        // max-width: 1300px;
+        // margin: 0 auto;
+        // padding: 0 10px;
+        right: 0;
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        
     }
     &__inner{
-        padding-left: 90px;
+        // padding-left: 90px;
         display: flex;
         gap: 40px;
     }
@@ -167,6 +175,11 @@
         &:hover &-link-title{
             color: $accent-color;
         }
+        &.active{
+            .catalog__item-link-title {
+                color: $accent-color;
+            }
+        }
         &-link{
             display: flex;
             align-items: center;
@@ -180,6 +193,7 @@
                 line-height: 1.5;
                 color: $main-color;
             }
+            
         }
     }
 }
