@@ -85,12 +85,12 @@ input[type=number] {
   src: url("/fonts/FONTSPRINGDEMO-NekstRegular.woff2") format("woff2");
   font-weight: 400;
 }
-.catalog__item-link-title, .menu__item-link {
+.catalog__cart-item-link, .catalog__item-link-title, .menu__item-link {
   font-family: "Nekst", sans-serif;
   font-weight: 500;
 }
 
-.catalog__title {
+.catalog__cart-list-type-title, .catalog__second-text, .catalog__title {
   font-family: "Nekst", sans-serif;
   font-weight: 700;
 }
@@ -133,8 +133,17 @@ body {
   padding: 0px 10px;
 }
 
+.open--menu {
+  overflow: hidden;
+}
+
 .no-scroll {
   overflow: hidden;
+}
+
+.open {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .dropdown {
@@ -169,8 +178,16 @@ body {
   display: block;
 }
 
-.open--menu {
-  overflow: hidden;
+.catalog__second.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  color: rgb(247, 117, 42);
 }
 
 .header {
@@ -284,15 +301,25 @@ body {
   line-height: 1.2;
 }
 
-.catalog__content {
+.catalog__dialog {
+  position: fixed;
+  left: 0;
+  top: 168px;
+}
+.catalog__inner {
+  padding-left: 90px;
+  display: flex;
+  gap: 40px;
+}
+.catalog__first {
   padding: 16px;
   background: rgba(97, 112, 125, 0.05);
   border-radius: 24px;
   min-width: 271px;
-  top: 80px;
   max-height: 580px;
   overflow-y: auto;
 }
+
 .catalog__list {
   padding: 16px 0;
   border-bottom: 2px solid rgba(97, 112, 125, 0.05);
@@ -326,7 +353,71 @@ body {
   color: rgb(20, 20, 20);
 }
 
-.catalog__content-inner {
+.catalog__second {
+  padding: 16px;
+  background: rgba(97, 112, 125, 0.05);
+  border-radius: 24px;
+}
+.catalog__second-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(223, 226, 229, 0.2);
+}
+.catalog__second-text {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  color: rgb(20, 20, 20);
+}
+.catalog__carts {
+  padding-top: 8px;
+}
+.catalog__cart {
+  display: flex;
+  gap: 64px;
+}
+.catalog__cart-list {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+.catalog__cart-list-type {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 18px;
+}
+.catalog__cart-list-type-title {
+  font-size: 24px;
+  line-height: 1.2;
+  color: rgb(97, 112, 125);
+}
+.catalog__cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.catalog__cart-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.catalog__cart-item:hover .catalog__cart-item-link {
+  color: rgb(247, 117, 42);
+}
+.catalog__cart-item-link {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(20, 20, 20);
+  padding: 8px 0;
+}
+
+.catalog__dialog {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }/*# sourceMappingURL=main.css.map */

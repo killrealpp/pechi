@@ -30,9 +30,6 @@
     }
 }
 
-// .logo{
-
-// }
 
 .cart, .star, .scales {
     width: 56px;
@@ -127,16 +124,30 @@
     }
 }
 
+
 .catalog{
-    &__content{
+    &__dialog{
+        position: fixed;
+        left: 0;
+        top: 168px;
+    }
+    &__inner{
+        padding-left: 90px;
+        display: flex;
+        gap: 40px;
+    }
+    &__first{
         padding: 16px;
         background: rgba(97, 112, 125, 0.05);
         border-radius: 24px;
         min-width: 271px;
-        top: 80px;
         max-height: 580px;
         overflow-y: auto;
     }
+}
+
+
+.catalog{
     &__list {
         padding: 16px 0;
         border-bottom: 2px solid rgba(97, 112, 125, 0.05);
@@ -173,8 +184,78 @@
     }
 }
 
-.catalog__content-inner{
-    display: flex;
-    flex-direction: column;
+.catalog{
+    &__second{
+        padding: 16px;
+        background: rgba(97, 112, 125, 0.05);
+        border-radius: 24px;
+            &-title{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid rgb(223, 226, 229, 0.2);
+        }
+        &-text{
+            text-transform: uppercase;
+            @extend %nekst-700;
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: calc(1em / 10);
+            color: $main-color;
+        }
+    }
+    &__carts{
+        padding-top: 8px;
+    }
+    &__cart{
+        display: flex;
+        gap: 64px;
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            &-type{
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                padding: 18px;
+                &-title{
+                    @extend %nekst-700;
+                    font-size: 24px;
+                    line-height: 1.2;
+                    color: rgb(97, 112, 125);
+                }
+            }
+        }
+        &-items{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &-item{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            &:hover &-link{
+                color: $accent-color;
+            }
+            &-link{
+                @extend %nekst-500;
+                font-size: 16px;
+                line-height: 1.5;
+                color: $main-color;
+                padding: 8px 0;
+            }
+        }
+    }
 }
+
+.catalog__dialog{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
 
