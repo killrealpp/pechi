@@ -103,6 +103,8 @@ export function headerScroll() {
     const input = document.querySelector('.header__input')
     const num = document.querySelector('.header__num--scroll')
     const headerTop = document.querySelector('.header__top')
+    const catalogDialog = document.querySelector('.catalog__dialog')
+
 
     if (!headerBottom) return;
 
@@ -114,6 +116,7 @@ export function headerScroll() {
             input.classList.add('scroll__input')
             num.classList.remove('hidden')
             headerTop.classList.add('shadow')
+            catalogDialog.classList.remove('open')
         } else {
             headerBottom.classList.remove('scroll');
             headerBtns.classList.add('hidden')
@@ -139,4 +142,32 @@ export function scrollMenu(){
         }
     })
 
+}
+
+
+export function catalogTop() {
+    const catalogDialog = document.querySelector('.catalog__dialog');
+    const headerInner = document.querySelector('.header__inner');
+
+    if (catalogDialog && headerInner) {
+        const headerHeight = headerInner.offsetHeight; 
+        catalogDialog.style.top = `${headerHeight + 24}px`;
+    }
+}
+
+export function observeHeaderChanges() {
+    const headerInner = document.querySelector('.header__inner');
+
+    if (headerInner) {
+        const observer = new MutationObserver(() => {
+            catalogTop(); 
+        });
+
+        observer.observe(headerInner, {
+            childList: true,       
+            subtree: true,       
+            attributes: true,     
+            characterData: true   
+        });
+    }
 }

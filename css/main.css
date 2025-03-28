@@ -200,8 +200,7 @@ body {
 }
 
 .scroll {
-  visibility: hidden !important;
-  opacity: 0 !important;
+  display: none !important;
 }
 
 .scroll__input {
@@ -375,7 +374,6 @@ body {
 .catalog__dialog {
   position: fixed;
   left: 0;
-  top: 168px;
   right: 0;
   max-width: 1300px;
   width: 100%;
@@ -579,9 +577,7 @@ body {
 }
 
 .header__bottom {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: block;
 }
 
 .header-scroll__btns {

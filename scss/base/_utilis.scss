@@ -50,9 +50,6 @@
     display: block;
 }
 
-// .catalog__second.active {
-//     display: block;
-// }
 
 .hidden {
     display: none !important;  
@@ -66,8 +63,9 @@
 }
 
 .scroll{
-    visibility: hidden !important;
-    opacity: 0 !important;
+    // visibility: hidden !important;
+    // opacity: 0 !important;
+    display: none !important;
 }
 
 .scroll__input{
