@@ -1,21 +1,24 @@
 export function initCatalog() {
-    const catalogBtn = document.querySelector('.catalog__btn');
+    const catalogBtns = document.querySelectorAll('.catalog__btn, .header-scroll__btn-cataog');
     const catalogDialog = document.querySelector('.catalog__dialog');
     const catalogFirst = document.querySelector('.catalog__first');
 
-    catalogBtn.addEventListener('click', () => {
-        catalogDialog.classList.toggle('open');
+    catalogBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            catalogDialog.classList.toggle('open');
+        });
     });
 
     document.addEventListener('click', (event) => {
         if (
             !catalogFirst.contains(event.target) &&  
-            !catalogBtn.contains(event.target)     
+            ![...catalogBtns].some(btn => btn.contains(event.target))  
         ) {
             catalogDialog.classList.remove('open');
         }
     });
 }
+
 
 
 export function catalogVars() {
@@ -66,8 +69,6 @@ export function catalogVars() {
 export function initContacts(){
     const btn = document.querySelector('.header__num-btn')
     const details = document.querySelector('.number-details')
-    console.log(btn)
-    console.log(details)
 
     btn.addEventListener('click',()=>{
         details.classList.toggle('open')
@@ -101,6 +102,7 @@ export function headerScroll() {
     const headerBtns = document.querySelector('.header-scroll__btns')
     const input = document.querySelector('.header__input')
     const num = document.querySelector('.header__num--scroll')
+    const headerTop = document.querySelector('.header__top')
 
     if (!headerBottom) return;
 
@@ -111,12 +113,30 @@ export function headerScroll() {
             headerBtns.classList.add('scroll__btns')
             input.classList.add('scroll__input')
             num.classList.remove('hidden')
+            headerTop.classList.add('shadow')
         } else {
             headerBottom.classList.remove('scroll');
             headerBtns.classList.add('hidden')
             headerBtns.classList.remove('scroll__btns')
             input.classList.remove('scroll__input')
             num.classList.add('hidden')
+            headerTop.classList.remove('shadow')
         }
     });
+}
+
+export function scrollMenu(){
+    const btn = document.querySelector('.header-scroll__btn-menu')
+    const menu = document.querySelector('.header-scroll__menu')
+
+    btn.addEventListener('click', ()=>{
+        menu.classList.toggle('hidden')
+    })
+
+    document.addEventListener('click', (event)=>{
+        if (!menu.contains(event.target) && !btn.contains(event.target)){
+            menu.classList.add('hidden')
+        }
+    })
+
 }

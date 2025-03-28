@@ -19,6 +19,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 24px;
+        padding: 16px 0;
     }
     &__input{
         margin-left: clamp(1rem, -2.375rem + 6vw, 2.5rem);
@@ -119,6 +120,10 @@
             font-size: 16px;
             line-height: calc(24 / 16);
             color: $main-color;
+            transition: all 0.3s ease;
+            &:hover{
+                color: $accent-color;
+            }
         }
     }
 }
@@ -446,6 +451,36 @@
                 span{
                     background-color: $bg-color;
                 }
+            }
+        }
+    }
+}
+
+.header-scroll__btns{
+    position: relative;
+}
+
+.header-scroll__menu{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    min-width: 184px;
+    padding: 16px;
+    background-color: rgba(97, 112, 125, 0.05);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-item{
+        list-style: none;
+        &-link{
+            @extend %nekst-500;
+            font-size: 16px;
+            line-height: 1.5;
+            color: $main-color;
+            transition: all 0.3s ease;
+            &:hover{
+                color: $accent-color;
             }
         }
     }
