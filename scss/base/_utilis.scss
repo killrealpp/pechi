@@ -1,3 +1,8 @@
+.container-header{
+    position: relative;
+}
+
+
 .open--menu{
     overflow: hidden;
 }
@@ -45,14 +50,30 @@
     display: block;
 }
 
-.catalog__second.active {
-    display: block;
-}
+// .catalog__second.active {
+//     display: block;
+// }
 
 .hidden {
-    display: none;  
+    display: none !important;  
+}
+.block{
+    display: block !important;
 }
 
 .active{
     color: $accent-color;
+}
+
+.scroll{
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.scroll__input{
+    margin-left: 0 !important;
+}
+
+.scroll__btns{
+    margin-left: clamp(1rem, -2.375rem + 6vw, 2.5rem);
 }

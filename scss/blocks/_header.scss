@@ -5,6 +5,14 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
     }
     &__top{
         display: flex;
@@ -13,7 +21,7 @@
         gap: 24px;
     }
     &__input{
-        margin-left: 40px;
+        margin-left: clamp(1rem, -2.375rem + 6vw, 2.5rem);
         width: 100%;
         padding: 16px 0 16px 24px;
         @extend %nekst-400;
@@ -26,12 +34,13 @@
     &__details{
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: clamp(0.5625rem, -0.1375rem + 1.4vw, 1rem);
     }
 }
 
 
 .cart, .star, .scales {
+    position: relative;
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -45,24 +54,52 @@
     svg path{
         fill: $accent-color;
     }
+    
+    & span{
+        position: absolute;
+        top: 65%;
+        left: 65%;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @extend %nekst-900;
+        font-size: 12px;
+        line-height: 1.4;
+        color: $bg-color;
+        background-color: $accent-color;
+        border-radius: 50%;
+        border: 2px solid $accent-color;
+        transition: all 0.3s ease;
+    }
+}
+
+.cart, .star, .scales{
     &:hover{
         background-color: $accent-color;
         svg path{
             fill: #fff;
         }
+        span{
+            color: $accent-color;
+            background-color: $bg-color;
+        }
     }
 }
+
+
 
 
 .header{
     &__bottom{
         background-color: rgba(97, 112, 125, 0.05);
         border-radius: 28px;
-        padding-right: 40px;
         &-details{
             display: flex;
             align-items: center;
-            gap: 40px
+            gap: 40px;
+            padding-right: 40px;
         }
     }
 }
@@ -73,7 +110,7 @@
     &__list{
         display: flex;
         align-items: center;
-        gap: 40px;
+        gap: clamp(1.5625rem, -1.6174rem + 5.0676vw, 2.5rem);
     }
     &__item{
         list-style: none;
@@ -86,8 +123,10 @@
     }
 }
 
-.header__num{
+.header__num, .header__num--scroll{
     margin-left: auto;
+    position: relative;
+    min-width: 200px;
     &-btn{
         display: flex;
         align-items: center;
@@ -104,6 +143,12 @@
     }
 }
 
+.header__num-btn--scroll{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
 
 .catalog{
@@ -130,9 +175,6 @@
         position: fixed;
         left: 0;
         top: 168px;
-        // max-width: 1300px;
-        // margin: 0 auto;
-        // padding: 0 10px;
         right: 0;
         max-width: 1300px;
         width: 100%;
@@ -140,9 +182,8 @@
         
     }
     &__inner{
-        // padding-left: 90px;
         display: flex;
-        gap: 40px;
+        gap: clamp(1.5625rem, -1.6174rem + 5.0676vw, 2.5rem);
     }
     &__first{
         padding: 16px;
@@ -224,7 +265,7 @@
     }
     &__cart{
         display: flex;
-        gap: 64px;
+        gap: clamp(2.5rem, -24.6351rem + 43.2432vw, 10.5rem);
         &-list{
             display: flex;
             flex-direction: column;
@@ -272,4 +313,140 @@
     transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }
 
+.number-details, .number-details--scroll{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: absolute;
+    left: clamp(0rem, 14.8395rem + -23.6486vw, -4.375rem);
+    top: 56px;
+    z-index: 6;
+    width: clamp(12.5rem, -9.1233rem + 34.4595vw, 18.875rem);
+    background-color: rgba(97, 112, 125, 0.05);
+    border-radius: 24px;
+    padding: 16px;
+    &__menu{
+        padding-left: 17px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+    &__inner{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: clamp(1.0625rem, -2.3294rem + 5.4054vw, 2.0625rem);
+    }
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    &__title{
+        @extend %nekst-500;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        color: rgb(97, 112, 125);
+    }
+    &__text{
+        @extend %nekst-500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $main-color;
+    }
+    &__btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $accent-color;
+        color: $bg-color;
+        background-color: $accent-color;
+        padding: 19px 0;
+        border-radius: 28px;
+        @extend %nekst-700;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: calc(1em / 10);
+        text-transform: uppercase;
+        margin-bottom: 48px;
+        transition: all 0.3s ease;
+        &:hover{
+            color: $accent-color;
+            background-color: $bg-color;
+        }
+    }
+    &__network{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    &__item{
+        list-style: none;
+    }
+    &__texter{
+        text-align: center;
+        @extend %nekst-500;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        color: rgb(97, 112, 125);
+    }
+}
 
+
+.header__bottom{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header-scroll{
+    &__btns{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
+        min-width: 56px;
+        border-radius: 50%;
+        border: 2px solid $accent-color;
+        background-color: transparent;
+        color: $accent-color;
+        transition: all 0.3s ease;
+        span, svg{
+            fill: currentColor;
+        }
+        &:hover{
+            background-color: $accent-color;
+            color: $bg-color;
+        }
+
+        &-menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            span{
+                display: block;
+                width: 14px;
+                height: 2px;
+                background-color: $accent-color;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+            &:hover{
+                span{
+                    background-color: $bg-color;
+                }
+            }
+        }
+    }
+}
