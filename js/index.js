@@ -1,12 +1,11 @@
 import { initDropdowns } from "./modules/dropdown.js";
-import { initCatalog, catalogVars,} from "./modules/header.js";
-// initContacts, headerScroll, initScrollContact
+import { initCatalog, catalogVars, initContacts, headerScroll, initScrollContacts} from "./modules/header.js";
 initDropdowns();
 initCatalog();
 catalogVars();
-// initContacts();
-// headerScroll();
-// initScrollContacts()
+initContacts();
+headerScroll();
+initScrollContacts()
 
 
 
