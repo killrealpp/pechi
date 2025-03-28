@@ -104,7 +104,7 @@ export function headerScroll() {
     const num = document.querySelector('.header__num--scroll')
     const headerTop = document.querySelector('.header__top')
     const catalogDialog = document.querySelector('.catalog__dialog')
-
+    const catalogFirst = document.querySelector('.catalog__first')
 
     if (!headerBottom) return;
 
@@ -117,6 +117,7 @@ export function headerScroll() {
             num.classList.remove('hidden')
             headerTop.classList.add('shadow')
             catalogDialog.classList.remove('open')
+            catalogFirst.classList.add('catalog-height')
         } else {
             headerBottom.classList.remove('scroll');
             headerBtns.classList.add('hidden')
