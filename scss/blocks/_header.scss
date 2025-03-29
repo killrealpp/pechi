@@ -94,7 +94,7 @@
 
 .header{
     &__bottom{
-        background-color: rgba(97, 112, 125, 0.05);
+        background-color: #F6F7F8;
         border-radius: 28px;
         &-details{
             display: flex;
@@ -192,11 +192,11 @@
     }
     &__first{
         padding: 16px;
-        background: rgba(97, 112, 125, 0.05);
+        background: #F6F7F8;
         border-radius: 24px;
         min-width: 271px;
-        max-height: 580px;
-        overflow-y: auto;
+        max-height: 620px;
+        // overflow-y: auto;
     }
 }
 
@@ -247,7 +247,7 @@
 .catalog{
     &__second{
         padding: 16px;
-        background: rgba(97, 112, 125, 0.05);
+        background: #F6F7F8;
         border-radius: 24px;
             &-title{
             display: flex;
@@ -327,7 +327,7 @@
     top: 56px;
     z-index: 6;
     width: clamp(12.5rem, -9.1233rem + 34.4595vw, 18.875rem);
-    background-color: rgba(97, 112, 125, 0.05);
+    background-color: #F6F7F8;
     border-radius: 24px;
     padding: 16px;
     &__menu{
