@@ -140,7 +140,7 @@
         background-color: transparent;
         &-title{
             color: $accent-color;
-            font-family: 'Arial', sans-serif;
+            @extend %nekst-700;
             font-size: 16px;
             line-height: 1.2;
             letter-spacing: 0.1em;

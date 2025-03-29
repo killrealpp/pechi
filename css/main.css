@@ -67,41 +67,41 @@ input[type=number] {
 
 @font-face {
   font-family: "Nekst";
-  src: url("/fonts/FONTSPRINGDEMO-NekstBlackRegular.woff2") format("woff2");
+  src: url("/fonts/Nekst-Black.woff2") format("woff2");
   font-weight: 900;
 }
 @font-face {
   font-family: "Nekst";
-  src: url("/fonts/FONTSPRINGDEMO-NekstBoldRegular.woff2") format("woff2");
+  src: url("/fonts/Nekst-Bold.woff2") format("woff2");
   font-weight: 700;
 }
 @font-face {
   font-family: "Nekst";
-  src: url("/fonts/FONTSPRINGDEMO-NekstMediumRegular.woff2") format("woff2");
+  src: url("/fonts/Nekst-Medium.woff2") format("woff2");
   font-weight: 500;
 }
 @font-face {
   font-family: "Nekst";
-  src: url("/fonts/FONTSPRINGDEMO-NekstRegular.woff2") format("woff2");
+  src: url("/fonts/Nekst-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 .cart span, .star span, .scales span {
-  font-family: "Nekst", sans-serif;
+  font-family: "Nekst";
   font-weight: 900;
 }
 
 .footer-contacts__social-texts-text, .footer-contacts__menu-item-text, .footer-contacts__menu-item-title, .header-scroll__menu-item-link, .number-details__texter, .number-details--scroll__texter, .number-details__text, .number-details--scroll__text, .number-details__title, .number-details--scroll__title, .catalog__cart-item-link, .catalog__item-link-title, .menu__item-link {
-  font-family: "Nekst", sans-serif;
+  font-family: "Nekst";
   font-weight: 500;
 }
 
-.footer-inform__menu-item-link, .footer-inform__title, .number-details__btn, .number-details--scroll__btn, .catalog__cart-list-type-title, .catalog__second-text, .catalog__title {
-  font-family: "Nekst", sans-serif;
+.footer-inform__menu-item-link, .number-details__btn, .number-details--scroll__btn, .catalog__cart-list-type-title, .catalog__second-text, .catalog__title, .header__num-btn-title, .header__num--scroll-btn-title {
+  font-family: "Nekst";
   font-weight: 700;
 }
 
-.footer-bottom__title, .footer-contacts__social-texts-title, .header__input, body {
-  font-family: "Nekst", sans-serif;
+.footer-bottom__title, .footer-contacts__social-texts-title, .footer-inform__title, .header__input, body {
+  font-family: "Nekst";
   font-weight: 400;
 }
 
@@ -347,7 +347,6 @@ body {
 }
 .header__num-btn-title, .header__num--scroll-btn-title {
   color: rgb(247, 117, 42);
-  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.1em;

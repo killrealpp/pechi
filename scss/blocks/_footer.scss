@@ -20,7 +20,7 @@
         align-items: flex-start;
         gap: 24px;
         &__title{
-            @extend %nekst-700;
+            @extend %nekst-400;
             font-size: 22px;
             line-height: calc(26 / 22);
             letter-spacing: calc(1em / 3);
