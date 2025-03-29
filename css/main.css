@@ -90,17 +90,17 @@ input[type=number] {
   font-weight: 900;
 }
 
-.header-scroll__menu-item-link, .number-details__texter, .number-details--scroll__texter, .number-details__text, .number-details--scroll__text, .number-details__title, .number-details--scroll__title, .catalog__cart-item-link, .catalog__item-link-title, .menu__item-link {
+.footer-contacts__social-texts-text, .footer-contacts__menu-item-text, .footer-contacts__menu-item-title, .header-scroll__menu-item-link, .number-details__texter, .number-details--scroll__texter, .number-details__text, .number-details--scroll__text, .number-details__title, .number-details--scroll__title, .catalog__cart-item-link, .catalog__item-link-title, .menu__item-link {
   font-family: "Nekst", sans-serif;
   font-weight: 500;
 }
 
-.number-details__btn, .number-details--scroll__btn, .catalog__cart-list-type-title, .catalog__second-text, .catalog__title {
+.footer-inform__menu-item-link, .footer-inform__title, .number-details__btn, .number-details--scroll__btn, .catalog__cart-list-type-title, .catalog__second-text, .catalog__title {
   font-family: "Nekst", sans-serif;
   font-weight: 700;
 }
 
-.header__input, body {
+.footer-bottom__title, .footer-contacts__social-texts-title, .header__input, body {
   font-family: "Nekst", sans-serif;
   font-weight: 400;
 }
@@ -654,4 +654,154 @@ body {
 }
 .header-scroll__menu-item-link:hover {
   color: rgb(247, 117, 42);
+}
+
+.footer {
+  padding: 48px 0;
+  background-color: rgb(20, 20, 20);
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(254, 254, 255, 0.25);
+}
+.footer-inform {
+  max-width: 411px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.footer-inform__title {
+  font-size: 22px;
+  line-height: 1.1818181818;
+  letter-spacing: 0.3333333333em;
+  color: rgb(254, 254, 255);
+}
+.footer-inform__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.footer-inform__menu-item {
+  list-style: none;
+  width: 100%;
+}
+.footer-inform__menu-item-link {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(254, 254, 255);
+}
+.footer-contacts__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-contacts__item-title {
+  padding-bottom: 8px;
+}
+.footer-contacts__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-contacts__menu-item {
+  list-style: none;
+}
+.footer-contacts__menu-item-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-contacts__menu-item-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(254, 254, 255, 0.1);
+  border-radius: 50%;
+  color: rgb(254, 254, 255);
+}
+.footer-contacts__menu-item-svg svg {
+  fill: currentColor;
+}
+.footer-contacts__menu-item-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-contacts__menu-item-title {
+  font-size: 14px;
+  line-height: 1.1428571429;
+  color: rgba(254, 254, 255, 0.6);
+}
+.footer-contacts__menu-item-text {
+  max-width: 346px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(254, 254, 255);
+}
+.footer-contacts__map {
+  width: 100%;
+  height: auto;
+}
+.footer-contacts__map-img {
+  width: 411px;
+  height: 302px;
+}
+.footer-contacts__social {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-contacts__social-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.footer-contacts__social-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.footer-contacts__social-texts-title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(254, 254, 255);
+}
+.footer-contacts__social-texts-text {
+  max-width: 399px;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  color: rgba(254, 254, 255, 0.6);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-bottom__title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(254, 254, 255);
+}
+
+.social {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }/*# sourceMappingURL=main.css.map */
