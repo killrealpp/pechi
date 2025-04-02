@@ -118,6 +118,7 @@ export function headerScroll() {
             headerTop.classList.add('shadow')
             catalogDialog.classList.remove('open')
             catalogFirst.classList.add('catalog-height')
+
         } else {
             headerBottom.classList.remove('scroll');
             headerBtns.classList.add('hidden')
@@ -149,10 +150,20 @@ export function scrollMenu(){
 export function catalogTop() {
     const catalogDialog = document.querySelector('.catalog__dialog');
     const headerInner = document.querySelector('.header__inner');
+    const top = document.querySelector('.top');
 
-    if (catalogDialog && headerInner) {
-        const headerHeight = headerInner.offsetHeight; 
-        catalogDialog.style.top = `${headerHeight + 24}px`;
+    if (headerInner) {
+        console.log(headerInner.getBoundingClientRect())
+        const headerHeight = headerInner.getBoundingClientRect().height; // Теперь всегда корректный размер
+        
+
+        if (catalogDialog) {
+            catalogDialog.style.top = `${headerHeight + 24}px`;
+        }
+
+        if (top) {
+            top.style.paddingTop = `${headerHeight + 124}px`;
+        }
     }
 }
 
