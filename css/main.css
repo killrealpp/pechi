@@ -915,4 +915,25 @@ body {
 }
 .catalogy__item--big {
   grid-column: span 5;
+}
+
+@media (max-width: 834px) {
+  .catalogy-swiper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 24px;
+  }
+  .catalogy__item {
+    grid-column: span 1;
+  }
+  .catalogy__item--big {
+    grid-column: span 1;
+  }
+}
+@media (max-width: 555px) {
+  .catalogy-swiper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 24px;
+  }
 }/*# sourceMappingURL=main.css.map */
