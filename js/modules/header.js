@@ -153,7 +153,6 @@ export function catalogTop() {
     const top = document.querySelector('.top');
 
     if (headerInner) {
-        console.log(headerInner.getBoundingClientRect())
         const headerHeight = headerInner.getBoundingClientRect().height; // Теперь всегда корректный размер
         
 
@@ -182,4 +181,19 @@ export function observeHeaderChanges() {
             characterData: true   
         });
     }
+}
+
+export function openBurgerMenu(){
+    const openButton = document.querySelector('.header__plan-btn')
+    const menu = document.querySelector('.menu-plan')
+    const closeButton = document.querySelector('.menu-plan__back-svg')
+
+    openButton.addEventListener('click', ()=>{
+        menu.classList.add('open')
+    })
+
+    closeButton.addEventListener('click', ()=>[
+        menu.classList.remove('open')
+    ])
+
 }

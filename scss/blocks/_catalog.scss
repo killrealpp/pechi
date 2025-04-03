@@ -13,6 +13,26 @@
         line-height: 1.2;
         color: $main-color;
     }
+    &__btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 55px;
+        background-color: $bg-color;
+        color: $accent-color;
+        text-transform: uppercase;
+        @extend %nekst-700;
+        font-size: 16px;
+        line-height: 1.2;
+        border-radius: 28px;
+        border: 2px solid $accent-color;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: $accent-color;
+            color: $bg-color;
+        }
+    }
 }
 
 .catalogy__slide{
@@ -78,5 +98,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px 24px;
+    }
+}
+
+@media (max-width: 375px){
+    .catalogy__item{
+        width: 147px !important;
+        height: 206px !important;
     }
 }

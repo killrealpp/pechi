@@ -4,17 +4,10 @@ function initializeSwiper(){
     if (swiperInstance) return
 
     swiperInstance = new Swiper('.swiper', {
-        slidesPerView: 1,
-        spaceBetween: 10,
+        slidesPerView: 2.5,
+        spaceBetween: 16,
         loop: true,
-        pagination:{
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        }
+        touchEventsTarget: 'container',
     })
 }
 
@@ -23,6 +16,22 @@ function destroySwiper(){
         swiperInstance.destroy(true, true)
         swiperInstance = null
     }
+
+    const swiper = document.querySelector('.cat');
+    const swiperWrapper = document.querySelector('.catalogy-swiper');
+    const swiperSlides = document.querySelectorAll('.catalogy__item');
+
+    if (swiper && swiperWrapper) {
+
+        swiper.classList.remove('swiper');
+        swiperWrapper.classList.remove('swiper-wrapper');
+
+        swiperSlides.forEach(slide => {
+            slide.classList.remove('swiper-slide');
+        });
+
+    }
+
 }
 
 export function onWidthMatch(callback) {
@@ -37,13 +46,26 @@ export function onWidthMatch(callback) {
     }
 
     mediaQuery.addEventListener("change", checkSize);
-    checkSize(mediaQuery); // Инициализируем сразу при запуске
+    checkSize(mediaQuery); 
 }
-
 export function myCallback(shouldInitialize) {
-    if (shouldInitialize) {
-        initializeSwiper();
-    } else {
-        destroySwiper(); 
+    const swiper = document.querySelector('.cat');
+    const swiperWrapper = document.querySelector('.catalogy-swiper');
+    const swiperSlides = document.querySelectorAll('.catalogy__item');
+
+    if (swiper && swiperWrapper) {
+
+        swiper.classList.add('swiper');
+        swiperWrapper.classList.add('swiper-wrapper');
+
+        swiperSlides.forEach(slide => {
+            slide.classList.add('swiper-slide');
+        });
+
+        if (shouldInitialize) {
+            initializeSwiper();
+        } else {
+            destroySwiper();
+        }
     }
 }
