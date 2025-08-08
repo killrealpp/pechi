@@ -130,6 +130,42 @@ export function headerScroll() {
     });
 }
 
+// export function headerScroll() {
+//     const headerBottom = document.querySelector('.header__bottom');
+//     const headerBtns = document.querySelector('.header-scroll__btns')
+//     const input = document.querySelector('.header__input')
+//     const num = document.querySelector('.header__num--scroll')
+//     const headerTop = document.querySelector('.header__top')
+//     const catalogDialog = document.querySelector('.catalog__dialog')
+//     const catalogFirst = document.querySelector('.catalog__first')
+
+//     if (!headerBottom) return;
+
+//     window.addEventListener('scroll', () => {
+//         // Если экран меньше или равен 768px - НЕ применяем класс 'scroll' к headerBottom
+//         const isMobile = window.innerWidth <= 768;
+//         const isScrolled = window.scrollY > 150;
+
+//         if (isScrolled) {
+//             if (!isMobile) headerBottom.classList.add('scroll'); // Только на ПК
+//             headerBtns.classList.remove('hidden')
+//             headerBtns.classList.add('scroll__btns')
+//             input.classList.add('scroll__input')
+//             num.classList.remove('hidden')
+//             headerTop.classList.add('shadow')
+//             catalogDialog.classList.remove('open')
+//             catalogFirst.classList.add('catalog-height')
+//         } else {
+//             if (!isMobile) headerBottom.classList.remove('scroll'); // Только на ПК
+//             headerBtns.classList.add('hidden')
+//             headerBtns.classList.remove('scroll__btns')
+//             input.classList.remove('scroll__input')
+//             num.classList.add('hidden')
+//             headerTop.classList.remove('shadow')
+//         }
+//     });
+// }
+
 export function scrollMenu(){
     const btn = document.querySelector('.header-scroll__btn-menu')
     const menu = document.querySelector('.header-scroll__menu')

@@ -736,6 +736,14 @@
             cursor: pointer;
         }
     }
+
+     .header__num--scroll{
+        display: none;
+     }
+     .header-scroll__btns{
+        display: none;
+     }
+
 }
 
 @media(max-width: 590px){

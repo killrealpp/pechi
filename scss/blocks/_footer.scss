@@ -1,40 +1,47 @@
-.footer{
+.footer {
     padding: 48px 0;
     background-color: $main-color;
-    &__container{
+
+    &__container {
         display: flex;
         flex-direction: column;
         gap: 48px;
     }
-    &__inner{
+
+    &__inner {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
         padding-bottom: 48px;
         border-bottom: 1px solid rgba(254, 254, 255, 0.25);
     }
-    &-inform{
+
+    &-inform {
         max-width: 411px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        &__title{
+
+        &__title {
             @extend %nekst-400;
             font-size: 22px;
             line-height: calc(26 / 22);
             letter-spacing: calc(1em / 3);
             color: $bg-color;
         }
-        &__menu{
+
+        &__menu {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 8px;
-            &-item{
+
+            &-item {
                 list-style: none;
                 width: 100%;
-                &-link{
+
+                &-link {
                     @extend %nekst-700;
                     font-size: 16px;
                     line-height: 1.5;
@@ -43,28 +50,34 @@
             }
         }
     }
-    &-contacts__item{
+
+    &-contacts__item {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 16px;
-        &-title{
+
+        &-title {
             padding-bottom: 8px;
         }
     }
-    &-contacts{
-        &__menu{
+
+    &-contacts {
+        &__menu {
             display: flex;
             flex-direction: column;
             gap: 24px;
-            &-item{
+
+            &-item {
                 list-style: none;
-                &-link{
+
+                &-link {
                     display: flex;
                     align-items: center;
                     gap: 16px;
                 }
-                &-svg{
+
+                &-svg {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -73,22 +86,26 @@
                     background-color: rgba(254, 254, 255, 0.1);
                     border-radius: 50%;
                     color: $bg-color;
-                    svg{
+
+                    svg {
                         fill: currentColor;
                     }
                 }
-                &-texts{
+
+                &-texts {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                 }
-                &-title{
+
+                &-title {
                     @extend %nekst-500;
                     font-size: 14px;
                     line-height: calc(16 / 14);
                     color: rgba(254, 254, 255, 0.6)
                 }
-                &-text{
+
+                &-text {
                     max-width: 346px;
                     @extend %nekst-500;
                     font-size: 16px;
@@ -97,36 +114,43 @@
                 }
             }
         }
-        &__map{
+
+        &__map {
             width: 100%;
             height: auto;
-            &-img{
-                width: 411px;
-                height: 302px;
+
+            &-img {
+                width: 100%;
+                height: auto;
             }
         }
-        &__social{
+
+        &__social {
             display: flex;
             flex-direction: column;
             gap: 16px;
-            &-items{
+
+            &-items {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 gap: 16px;
             }
-            &-texts{
+
+            &-texts {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
                 align-items: flex-start;
-                &-title{
+
+                &-title {
                     @extend %nekst-400;
                     font-size: 16px;
                     line-height: 1.5;
                     color: $bg-color;
                 }
-                &-text{
+
+                &-text {
                     max-width: 399px;
                     @extend %nekst-500;
                     font-size: 14px;
@@ -138,11 +162,12 @@
     }
 }
 
-.footer-bottom{
+.footer-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
-    &__title{
+
+    &__title {
         @extend %nekst-400;
         font-size: 16px;
         line-height: 1.5;
@@ -150,9 +175,81 @@
     }
 }
 
-.social{
+.social {
     padding-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 48px;
+}
+
+.hidden1 {
+    display: none;
+}
+
+@media (max-width: 834px) {
+    .footer-contacts__menu-item-link {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .footer-contacts__menu-item-svg,
+    .footer-contacts__menu-item-texts {
+        margin-right: auto;
+    }
+
+    .hidden1 {
+        display: block;
+    }
+
+    .hidden2 {
+        display: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .footer {
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 47px;
+        }
+
+        &-inform {
+            margin: 0 auto;
+
+            &__title {
+                font-weight: 700;
+                font-size: 22px;
+                letter-spacing: 2px;
+            }
+
+            &__menu-item {
+                font-weight: 500;
+                // @extend %nekst-500;
+                font-size: 16px;
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
+
+        &-contacts__item {
+            align-items: center;
+        }
+    }
+
+    .footer-contacts__menu-item-texts {
+        margin: 0;
+    }
+
+    .hidden1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contacts__menu-item-svg,
+    .footer-contacts__menu-item-texts {
+        margin: 0;
+    }
 }
