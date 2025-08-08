@@ -2,10 +2,12 @@ export function initCatalog() {
     const catalogBtns = document.querySelectorAll('.catalog__btn, .header-scroll__btn-cataog');
     const catalogDialog = document.querySelector('.catalog__dialog');
     const catalogFirst = document.querySelector('.catalog__first');
+    const body = document.body
 
     catalogBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
             catalogDialog.classList.toggle('open');
+            body.classList.toggle('open--menu')
         });
     });
 
@@ -15,6 +17,7 @@ export function initCatalog() {
             ![...catalogBtns].some(btn => btn.contains(event.target))  
         ) {
             catalogDialog.classList.remove('open');
+            body.classList.remove('open--menu');
         }
     });
 }
@@ -223,13 +226,32 @@ export function openBurgerMenu(){
     const openButton = document.querySelector('.header__plan-btn')
     const menu = document.querySelector('.menu-plan')
     const closeButton = document.querySelector('.menu-plan__back-svg')
+    // const body = document.body
 
     openButton.addEventListener('click', ()=>{
         menu.classList.add('open')
+        // body.classList.toggle('open--menu')
+
     })
 
     closeButton.addEventListener('click', ()=>[
         menu.classList.remove('open')
+        // body.classList.remove('open--menu')
     ])
 
+}
+
+
+export function openCatalog(){
+    const planCat = document.querySelector('.plan-cat')
+    const menuPlanCat = document.querySelector('.menu-plan__cat')
+    const backSvg = document.querySelector('.back-svg') 
+
+    planCat.addEventListener('click', ()=>{
+        menuPlanCat.classList.add('block')
+    })
+
+    backSvg.addEventListener('click', ()=>{
+        menuPlanCat.classList.remove('block')
+    })
 }

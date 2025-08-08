@@ -1,22 +1,25 @@
-.top{
+.top {
     background-image: url('/img/top/top.png');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     padding: 111px 0;
-    &__inner{
+
+    &__inner {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 48px;
     }
-    &__texts{
+
+    &__texts {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
     }
-    &__title{
+
+    &__title {
         max-width: 855px;
         @extend %nekst-700;
         font-size: 64px;
@@ -24,7 +27,8 @@
         color: $bg-color;
         text-transform: capitalize;
     }
-    &__text{
+
+    &__text {
         max-width: 632px;
         @extend %nekst-500;
         font-size: 24px;
@@ -32,7 +36,8 @@
         color: $bg-color;
         text-transform: capitalize;
     }
-    &__btn{
+
+    &__btn {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -41,16 +46,53 @@
         background-color: $accent-color;
         border: 2px solid $accent-color;
         border-radius: 36px;
-        box-shadow: 0px 0px 1px 0px rgba(97, 112, 125, 0.04),0px 2px 6px 0px rgba(97, 112, 125, 0.04),0px 10px 20px 0px rgba(97, 112, 125, 0.04);
+        box-shadow: 0px 0px 1px 0px rgba(97, 112, 125, 0.04), 0px 2px 6px 0px rgba(97, 112, 125, 0.04), 0px 10px 20px 0px rgba(97, 112, 125, 0.04);
         text-transform: uppercase;
         @extend %nekst-700;
         font-size: 16px;
         line-height: 1.2;
         color: $bg-color;
         transition: all 0.3s ease;
-        &:hover{
+
+        &:hover {
             background-color: $bg-color;
             color: $accent-color;
+        }
+    }
+}
+
+@media (max-width: 834px) {
+    .top {
+        &__title {
+            max-width: 598px;
+            font-size: 64px;
+        }
+
+        &__text {
+            max-width: 393px;
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 593px) {
+    .top {
+        padding: 24px 0 40px 0;
+        padding-top: 100px !important;
+
+        &__title {
+            max-width: 304px;
+            font-size:32px;
+        }
+
+        &__text {
+            max-width: 356px;
+            font-size: 16px;
+        }
+
+        &__inner{
+            justify-content: space-between;
+            gap: 383px;
         }
     }
 }
