@@ -1,0 +1,48 @@
+.montazh{
+    padding-bottom: 72px;
+    background-color: $bg-color;
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 40px;    
+        line-height: 1.2;
+    }
+
+    &__details{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 0;
+    }
+
+    &__svg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(247, 117, 42), 0.2;
+        width: 48px;
+        height: 48px;
+        svg{
+            color:rgb(247, 117, 42)
+        }
+    }
+
+    &__text{
+        max-width: 564px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3fr, 1);
+    }
+}
