@@ -1,0 +1,93 @@
+.produced{
+    padding-bottom: 72px;
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+
+    &__title{
+        text-align: left;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    &__btn{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 54px;
+        border: none;
+        outline: none;
+        background-color: $bg-color;
+        color: $accent-color;
+        border: 2px solid $accent-color;
+        border-radius: 38px;
+
+        &-title{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.2;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+.slider{
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+
+    &-track{
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        animation: move 13s linear infinite;
+    }
+}
+
+.slide{
+    width: 193px;
+    height: 131px;
+    overflow: hidden;
+    margin-right: 24px;
+
+    &__img{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+@media (max-width: 834px){
+    .produced__btn{
+        margin: 0;
+
+    }
+}
+
+@media (max-width: 375px){
+    .produced{
+        &__title{
+            font-size: 32px;
+        }
+    }
+}

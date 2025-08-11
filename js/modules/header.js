@@ -13,8 +13,8 @@ export function initCatalog() {
 
     document.addEventListener('click', (event) => {
         if (
-            !catalogFirst.contains(event.target) &&  
-            ![...catalogBtns].some(btn => btn.contains(event.target))  
+            !catalogFirst.contains(event.target) &&
+            ![...catalogBtns].some(btn => btn.contains(event.target))
         ) {
             catalogDialog.classList.remove('open');
             body.classList.remove('open--menu');
@@ -43,7 +43,7 @@ export function catalogVars() {
             });
 
             contentBox.classList.remove('hidden')
-            
+
         });
 
         item.addEventListener('mouseleave', function () {
@@ -69,32 +69,32 @@ export function catalogVars() {
 }
 
 
-export function initContacts(){
+export function initContacts() {
     const btn = document.querySelector('.header__num-btn')
     const details = document.querySelector('.number-details')
 
-    btn.addEventListener('click',()=>{
+    btn.addEventListener('click', () => {
         details.classList.toggle('open')
-    })  
+    })
 
-    document.addEventListener('click', (event)=>{
-        if (!details.contains(event.target) && !btn.contains(event.target)){
+    document.addEventListener('click', (event) => {
+        if (!details.contains(event.target) && !btn.contains(event.target)) {
             details.classList.remove('open')
         }
     })
 }
 
 
-export function initScrollContacts(){
+export function initScrollContacts() {
     const btn = document.querySelector('.header__num-btn--scroll')
     const details = document.querySelector('.number-details--scroll')
 
-    btn.addEventListener('click',()=>{
+    btn.addEventListener('click', () => {
         details.classList.toggle('open')
-    })  
+    })
 
-    document.addEventListener('click', (event)=>{
-        if (!details.contains(event.target) && !btn.contains(event.target)){
+    document.addEventListener('click', (event) => {
+        if (!details.contains(event.target) && !btn.contains(event.target)) {
             details.classList.remove('open')
         }
     })
@@ -169,16 +169,16 @@ export function headerScroll() {
 //     });
 // }
 
-export function scrollMenu(){
+export function scrollMenu() {
     const btn = document.querySelector('.header-scroll__btn-menu')
     const menu = document.querySelector('.header-scroll__menu')
 
-    btn.addEventListener('click', ()=>{
+    btn.addEventListener('click', () => {
         menu.classList.toggle('hidden')
     })
 
-    document.addEventListener('click', (event)=>{
-        if (!menu.contains(event.target) && !btn.contains(event.target)){
+    document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && !btn.contains(event.target)) {
             menu.classList.add('hidden')
         }
     })
@@ -193,7 +193,7 @@ export function catalogTop() {
 
     if (headerInner) {
         const headerHeight = headerInner.getBoundingClientRect().height; // Теперь всегда корректный размер
-        
+
 
         if (catalogDialog) {
             catalogDialog.style.top = `${headerHeight + 24}px`;
@@ -210,31 +210,31 @@ export function observeHeaderChanges() {
 
     if (headerInner) {
         const observer = new MutationObserver(() => {
-            catalogTop(); 
+            catalogTop();
         });
 
         observer.observe(headerInner, {
-            childList: true,       
-            subtree: true,       
-            attributes: true,     
-            characterData: true   
+            childList: true,
+            subtree: true,
+            attributes: true,
+            characterData: true
         });
     }
 }
 
-export function openBurgerMenu(){
+export function openBurgerMenu() {
     const openButton = document.querySelector('.header__plan-btn')
     const menu = document.querySelector('.menu-plan')
     const closeButton = document.querySelector('.menu-plan__back-svg')
     // const body = document.body
 
-    openButton.addEventListener('click', ()=>{
+    openButton.addEventListener('click', () => {
         menu.classList.add('open')
         // body.classList.toggle('open--menu')
 
     })
 
-    closeButton.addEventListener('click', ()=>[
+    closeButton.addEventListener('click', () => [
         menu.classList.remove('open')
         // body.classList.remove('open--menu')
     ])
@@ -242,16 +242,51 @@ export function openBurgerMenu(){
 }
 
 
-export function openCatalog(){
+export function openCatalog() {
     const planCat = document.querySelector('.plan-cat')
     const menuPlanCat = document.querySelector('.menu-plan__cat')
-    const backSvg = document.querySelector('.back-svg') 
+    const backSvg = document.querySelector('.back-svg')
 
-    planCat.addEventListener('click', ()=>{
+    planCat.addEventListener('click', () => {
         menuPlanCat.classList.add('block')
     })
 
-    backSvg.addEventListener('click', ()=>{
+    backSvg.addEventListener('click', () => {
         menuPlanCat.classList.remove('block')
     })
+}
+
+export function initDialogs() {
+    const body = document.body
+
+    document.querySelectorAll('.open').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dialogName = btn.dataset.dialog
+            const dialog = document.getElementById(`${dialogName}-dialog`)
+
+            if (dialog) {
+                document.querySelectorAll('.dialog').forEach(d => d.classList.remove('active'))
+                dialog.classList.add('active')
+                body.classList.add('no-scroll')
+            }
+        })
+    })
+
+    document.querySelectorAll('.dialog__close').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dialog = btn.closest('.dialog')
+            dialog.classList.remove('active')
+            body.classList.remove('no-scroll')
+        })
+    })
+
+    document.querySelectorAll('.dialog').forEach(dialog => {
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) {
+                dialog.classList.remove('active');
+                body.classList.remove('no-scroll');
+            }
+        });
+    });
+
 }

@@ -1,6 +1,7 @@
 .catalogy{
     padding: 72px 0;
     background-color: $bg-color;
+    overflow: hidden;
     &__inner{
         display: flex;
         flex-direction: column;

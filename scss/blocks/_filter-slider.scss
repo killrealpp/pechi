@@ -1,0 +1,111 @@
+.popular{
+    padding-bottom: 72px;
+    background-color: $bg-color;
+
+    &-container{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.2;
+        text-align: left;
+    }
+} 
+
+.popular-filter{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.popular-list{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__item{
+        list-style: none;
+        padding: 14px 24px;
+        background-color: $bg-color;
+        color: $accent-color;
+        border-radius: 28px;
+        border: 2px solid $accent-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+
+        &:hover{
+            background-color: $accent-color;
+            color: $bg-color;
+        }
+    }
+}
+
+.blocks__item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 16px;
+    transition: all 0.3s ease; 
+    &:hover{
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+            0 2px 4px rgba(0, 0, 0, 0.06);
+
+    }
+
+    &-img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 4px;
+        position: relative;
+    }
+
+    &-title{
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    &-sum{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &-svg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 5%;
+        left: 3%;
+        width: 32px;
+        height: 32px;
+        background-color: #FCAB1E;
+        opacity: 0.1;
+        border-radius: 50%;
+        
+        svg{
+            width: 15px;
+            height: 15px;
+            color: red;
+            opacity: 1;
+        }
+    }
+}
+
+

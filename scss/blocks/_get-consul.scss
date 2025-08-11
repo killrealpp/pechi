@@ -1,0 +1,78 @@
+.get-consul-w{
+    padding-bottom: 72px;
+    background-color: $bg-color;
+}
+
+.get-consul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto;
+    max-width: 628px;
+    width: 100%;
+    padding: 24px;
+    border-radius: 24px;
+    border: 2px solid $accent-color;
+    
+    &__title {
+        max-width: 580px;
+        width: 100%;
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 40px;
+        color: $accent-color;
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__text {
+        max-width: 486px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    &__inputs {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    &__input {
+        padding: 17px 0 17px 24px;
+        max-width: 282px;
+        width: 100%;
+        border-radius: 28px;
+        border: none;
+        outline: none;
+        background-color: rgba(254, 254, 255, 0.1);
+        border: 2px solid rgb(223, 226, 229);
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__btn{
+        padding: 18px 0;
+        border-radius: 28px;
+        border: 2px solid $accent-color;
+        background-color: $accent-color;
+        color: $bg-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+
+        &:hover{
+            background-color: $bg-color;
+            color: $accent-color;
+        }
+    }
+} 

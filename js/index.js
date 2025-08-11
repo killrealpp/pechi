@@ -4,6 +4,8 @@ import { openBurgerMenu } from "./modules/header.js";
 import { catalogTop, observeHeaderChanges } from "./modules/header.js";
 import { onWidthMatch, myCallback } from "./modules/swiper-catalog.js";
 import { openCatalog } from "./modules/header.js";
+import { initDialogs } from "./modules/header.js";
+import { filter, filterSlider } from "./modules/filter-slider.js";
 
 window.addEventListener('load', catalogTop);
 window.addEventListener('resize', catalogTop);
@@ -20,3 +22,6 @@ observeHeaderChanges();
 onWidthMatch(myCallback);
 openBurgerMenu()
 openCatalog()
+initDialogs()
+filter()
+filterSlider()

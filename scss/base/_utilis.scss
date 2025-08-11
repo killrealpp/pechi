@@ -83,3 +83,17 @@
 .catalog-height{
     max-height: none !important;
 }
+
+
+.dialog.active {
+  display: flex;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.active-slider{
+    color: $bg-color !important;
+    background-color: $accent-color !important;
+}
