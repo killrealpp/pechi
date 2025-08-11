@@ -1673,6 +1673,22 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 930px) {
+  .popular-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 680px) {
+  .popular-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .popular-list__item {
+    font-size: 14px;
+  }
+}
 .get-consul-w {
   padding-bottom: 72px;
   background-color: rgb(254, 254, 255);
@@ -1743,4 +1759,20 @@ body {
 .get-consul__btn:hover {
   background-color: rgb(254, 254, 255);
   color: rgb(247, 117, 42);
+}
+
+@media (max-width: 375px) {
+  .get-consul__details {
+    flex-direction: row-reverse;
+  }
+  .get-consul__title {
+    font-size: 27px;
+  }
+  .get-consul__img {
+    width: 48px;
+    height: 48px;
+  }
+  .get-consul__inputs {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

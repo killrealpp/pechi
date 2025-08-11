@@ -1,9 +1,18 @@
 export function filterSlider(){
 
     const swiper01 = new Swiper('.swiper-filter1', {
-        slidesPerView: 4.5,
+        slidesPerView: 1.5,
         spaceBetween: 16,
         loop: true,
+
+        breakpoints:{
+            481:{
+                slidesPerView: 3.5
+            },
+            835:{
+                slidesPerView: 4.5
+            }
+        }
     })
 
 }

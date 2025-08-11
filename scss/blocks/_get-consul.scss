@@ -76,3 +76,22 @@
         }
     }
 } 
+
+@media (max-width: 375px){
+    .get-consul__details{
+        flex-direction: row-reverse;
+    }
+
+    .get-consul{
+        &__title{
+            font-size: 27px;
+        }
+        &__img{
+            width: 48px;
+            height: 48px;
+        }
+        &__inputs{
+            flex-direction: column;
+        }
+    }
+}

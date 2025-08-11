@@ -1,34 +1,34 @@
-.popular{
+.popular {
     padding-bottom: 72px;
     background-color: $bg-color;
 
-    &-container{
+    &-container {
         display: flex;
         flex-direction: column;
         gap: 24px;
     }
 
-    &__title{
+    &__title {
         font-weight: 700;
         font-size: 40px;
         line-height: 1.2;
         text-align: left;
     }
-} 
+}
 
-.popular-filter{
+.popular-filter {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.popular-list{
+.popular-list {
     margin-right: auto;
     display: flex;
     align-items: center;
     gap: 16px;
 
-    &__item{
+    &__item {
         list-style: none;
         padding: 14px 24px;
         background-color: $bg-color;
@@ -42,42 +42,43 @@
         letter-spacing: 2px;
         transition: all 0.3s ease;
 
-        &:hover{
+        &:hover {
             background-color: $accent-color;
             color: $bg-color;
         }
     }
 }
 
-.blocks__item{
+.blocks__item {
     display: flex;
     flex-direction: column;
     gap: 4px;
     max-width: 300px;
     width: 100%;
     border-radius: 16px;
-    transition: all 0.3s ease; 
-    &:hover{
+    transition: all 0.3s ease;
+
+    &:hover {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
             0 2px 4px rgba(0, 0, 0, 0.06);
 
     }
 
-    &-img{
+    &-img {
         width: 100%;
         height: auto;
         margin-bottom: 4px;
         position: relative;
     }
 
-    &-title{
+    &-title {
         text-align: center;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.2;
     }
 
-    &-sum{
+    &-sum {
         font-weight: 700;
         font-size: 16px;
         line-height: 1.5;
@@ -86,7 +87,7 @@
         margin-bottom: 10px;
     }
 
-    &-svg{
+    &-svg {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -98,8 +99,8 @@
         background-color: #FCAB1E;
         opacity: 0.1;
         border-radius: 50%;
-        
-        svg{
+
+        svg {
             width: 15px;
             height: 15px;
             color: red;
@@ -109,3 +110,22 @@
 }
 
 
+@media (max-width: 930px) {
+    .popular-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 680px){
+    .popular-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .popular-list__item{
+        font-size: 14px;
+    }
+}
